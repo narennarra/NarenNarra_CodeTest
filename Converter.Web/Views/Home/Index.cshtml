@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Currency to Words";
+}
+<script type="text/javascript" src="~/Scripts/Convert.js"></script>
+
+
+<div class="jumbotron">
+    <h1>Currency to Words</h1>
+</div>
+
+
+<div ng-controller="MainCtrl" class="row">
+    <div class="col-sm-6 col-sm-offset-3 panel panel-title">
+
+        <div class="panel-body ">
+
+            <p class="text-primary">Please enter an amount</p>
+            <div class="well well-sm">
+                <h6 class="text-info">
+                    <p>
+                        minimum -9999999999999.9999999999999 maximum 9999999999999.9999999999999<br /><br />
+                        Shows output beneath input field once focus is out of input field<br /><br />
+                        Rounds to 2 decimal places
+                    </p>
+                </h6>
+                <br />
+
+
+                <div class="input-group">
+                    $<input name="Amount" id="Amount" type="number" onchange="converttoWords()" />
+                </div>
+                <br />
+                <div id="output"></div>
+            </div>
+        </div>
+    </div>
+</div>
